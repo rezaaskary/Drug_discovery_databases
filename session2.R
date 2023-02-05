@@ -1,3 +1,5 @@
+library(datasets)
+library(pacman)
 v1 = is.logical(3)
 v2 = as.numeric(5)
 v3 = as.integer(3.6)
@@ -27,7 +29,7 @@ levels(factors)
 levels(f1)
 # table is used to count the element sof a factor
 table(f1)
-barplot(table(f1))
+#barplot(table(f1))
 
 m1 = matrix(1:20, byrow = T, nrow = 4)
 
@@ -45,10 +47,21 @@ a1[2,2,5]='new'
 
 ######################################################3333
 
+v21 = c(1:6)
+v22 = c('1','y','u','o','q','p')
+df31 = data.frame(v21,v22)
+#View(df31)
 
+df31[2,1]
 
+# factors and strings are different
 
+str(df31)
 
+#I()  # inhibit command for factors
+df32 = data.frame(v21,I(v22))
 
-
-
+##############################################3333
+data2 = data('ChickWeight')
+data(ChickWeight)
+data2
