@@ -22,3 +22,9 @@ LETTERS
 # indexin in R is similar to matlab
 LETTERS[c(3,20:25)]  # inclusion
 LETTERS[-c(3,20:25)] # exclusion
+
+LETTERS[c(-3:-5)]
+df1 = data.frame(L=LETTERS[rep(c(T),26)],l=letters[rep(c(T),26)])
+var1 = LETTERS
+var1[var1=='R']
+df1[df1[,1]=='R' | df1[,2]=='x',c('L','l')]
