@@ -29,10 +29,21 @@ levels(f1)
 table(f1)
 barplot(table(f1))
 
+m1 = matrix(1:20, byrow = T, nrow = 4)
 
 
+m2 = matrix(1:20,
+             byrow = T,
+            nrow = 4,
+            dimnames = list(str(1:4),c('c1','c2','c3','c4','c5')))
+# transopose
 
+m3=t(m2)
+a1 = array(m1,dim=c(2,2,5))
 
+a1[2,2,5]='new'
+
+######################################################3333
 
 
 
