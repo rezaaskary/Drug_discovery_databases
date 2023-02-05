@@ -1,8 +1,9 @@
 library(dplyr)
 library(help=datasets)
 library(datasets)
+library(ggplot2)
 dat <- head(mtcars)
-plot(dat$mpg, dat$hp)
+
 
 # asd #####
 
@@ -28,3 +29,4 @@ df1 = data.frame(L=LETTERS[rep(c(T),26)],l=letters[rep(c(T),26)])
 var1 = LETTERS
 var1[var1=='R']
 df1[df1[,1]=='R' | df1[,2]=='x',c('L','l')]
+plot(dat$mpg)
