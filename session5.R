@@ -29,7 +29,14 @@ colMeans(m1)
 # making a connection from mysqlite to our system
 mysqllite = dbConnect(RSQLite::SQLite(),'mySQLite.sqlite')
 
+# lets load data into SQL
 data = ChickWeight
+
+# writting tables
+dbWriteTable(conn = mysqllite,
+             name = 'SQLchickweight',
+             value = data.frame(data))
+
 
 
 
