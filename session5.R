@@ -34,9 +34,12 @@ data = ChickWeight
 
 # writting tables
 dbWriteTable(conn = mysqllite,
-             name = 'SQLchickweight',
+             name = 'sql_ch_',
              value = data.frame(data))
-
+#############################################################3
+# now lets make some inquery:
+my_inquery = "SELECT Chick FROM sql_ch_ WHERE Chick>25 LIMIT 10"
+dbGetQuery(mysqllite, my_inquery)
 
 
 
