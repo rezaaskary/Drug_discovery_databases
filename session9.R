@@ -25,9 +25,13 @@ fivenum(ChickWeight$weight)
 hist(ChickWeight$weight, breaks = fivenum(ChickWeight$weight))
 
 # saving plots
-pdf('first_fig.pdf')
-hist(ChickWeight$weight)
+pdf('first_fig.pdf',paper = 'letter',title = 'Chick weights')
+hist(ChickWeight$weight,main = 'my title')
 dev.off()
 ###################
+jpeg('first_fig.jpg',title = 'Chick weights')
+hist(ChickWeight$weight,main = 'my title')
+dev.off()
+
 
 
